@@ -1,16 +1,19 @@
 import React, { createContext ,Dispatch ,SetStateAction} from 'react'
-import { Author ,Article ,Theme ,setTheme ,FilterAuthorsName ,editorKey ,isEditor ,setIsEditor} from '../hooks/usePosts'
+import {  Article , SetArticles ,editorKey ,isEditor ,setIsEditor ,URL ,articalContent  ,setArticleContent ,articlesToDisplay ,setArticlesToDisplay} from '../hooks/usePosts'
 
 
 interface PostsContextInterface{
-    author: Author[],
     articles: Article[],
-    Theme: string,
-    setTheme: (theme:string)=> void,
-    filterAuthorsName:string[],
+    setArticles: Dispatch<SetStateAction<string>>;
     editorKey:string,
     isEditor: boolean,
-    setIsEditor: Dispatch<SetStateAction<boolean>>
+    setIsEditor: Dispatch<SetStateAction<boolean>>,
+    URL: string,
+    articalContent: string,
+    setArticleContent:Dispatch<SetStateAction<string>>
+    articlesToDisplay: articlesToDisplay[],
+    setArticlesToDisplay:Dispatch<SetStateAction<articlesToDisplay[]>>;
+
 }
 
 export const PostContext = createContext<PostsContextInterface | undefined>(undefined) 

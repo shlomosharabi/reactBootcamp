@@ -1,13 +1,12 @@
-import React from 'react'
-import WritersCard from '../components/WritersCard';
+import React from "react";
+import WritersCard from "../components/writersCard/WritersCard";
 
-
-const Home:React.FC = () => {
+const Home: React.FC = () => {
   return (
-    <div> 
-        <WritersCard/>
+    <div>
+      <WritersCard />
     </div>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;
