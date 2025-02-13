@@ -1,7 +1,6 @@
 import "./App.css";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import HomePage from "./pages/Home";
-import AuthorBlog from "./pages/AuthorBlog";
 import { PostContext } from "./hooks/PostsContext";
 import usePosts from "./hooks/usePosts";
 import ArticleCard from "./components/articalCard/ArticleCard";
@@ -14,8 +13,6 @@ function App() {
     setArticles,
     filterdArticleBYSuorce,
     logoImage,
-    editorKey,
-    isEditor,
     setIsEditor,
     URL,
     articlesToDisplay,
@@ -30,8 +27,6 @@ function App() {
           setArticles,
           filterdArticleBYSuorce,
           logoImage,
-          editorKey,
-          isEditor,
           setIsEditor,
           URL,
           articlesToDisplay,
@@ -42,7 +37,6 @@ function App() {
           <Routes>
             <Route path="/" element={<Layout />}>
               <Route index element={<HomePage />} />
-              <Route path="/AuthorBlog/:id" element={<AuthorBlog />} />
               <Route path="/article/:id" element={<ArticleCard />} />
               <Route path="/About" element={<About />} />
             </Route>

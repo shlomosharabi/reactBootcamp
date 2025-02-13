@@ -22,15 +22,6 @@ export interface articalContent{
 export interface setArticleContent{
     setArticleContent:Dispatch<SetStateAction<Article[]>>;
 }
-export interface editorKey{
-    editorKey:string
-}
-export interface isEditor{
-    isEditor: boolean
-}
-export interface setIsEditor{
-    setIsEditor: Dispatch<SetStateAction<boolean>>;
-}
 export interface URL{
     URL: string
 }
@@ -53,15 +44,11 @@ const usePosts = () => {
    
    const [articlesToDisplay,setArticlesToDisplay] = useState<articlesToDisplay[]>([])
 
-   const editorKey:string = "1234"
-
-   const [isEditor,setIsEditor] = useState<boolean>(false);
-   
    const URL:string =` https://newsapi.org/v2/top-headlines?country=us&apiKey=b73d6398d05b43bf8df72b4ca814c3d8`;
 
    const [articalContent,setArticleContent] = useState<string>()
 
-  return { articles , setArticles , editorKey ,isEditor ,setIsEditor ,URL ,articalContent ,setArticleContent ,articlesToDisplay,setArticlesToDisplay}
+  return { articles , setArticles ,URL ,articalContent ,setArticleContent ,articlesToDisplay,setArticlesToDisplay}
 }
 
 export default usePosts

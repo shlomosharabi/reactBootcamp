@@ -1,7 +1,6 @@
 import React, { useEffect, useContext } from "react";
 import { PostContext } from "../../hooks/PostsContext";
 import "./writersCard.css";
-import { useNavigate } from "react-router-dom";
 import ArticleCard from "../articalCard/ArticleCard";
 
 const WritersCard = () => {
@@ -18,11 +17,6 @@ const WritersCard = () => {
     setArticlesToDisplay,
   } = context;
 
-  const navigate = useNavigate();
-
-  const handleNavigate = (id: string) => {
-    navigate(`/article/${id}`);
-  };
 
   useEffect(() => {
     async function fetchData() {
