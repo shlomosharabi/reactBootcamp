@@ -11,7 +11,6 @@ const WritersCard = () => {
 
   const {
     URL,
-    articles,
     setArticles,
     articlesToDisplay,
     setArticlesToDisplay,
