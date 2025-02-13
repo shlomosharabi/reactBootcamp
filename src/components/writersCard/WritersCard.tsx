@@ -35,7 +35,7 @@ const WritersCard = () => {
           setArticlesToDisplay(data.articles);
         }
       } catch (error) {
-        console.error(`error fetching data ${error.message}`);
+        console.error(`error  fetching data ${error.message}`);
       }
     }
 
